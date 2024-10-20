@@ -1,0 +1,495 @@
+<html lang="es">
+    <meta charset="UTF-8">
+    <head>
+        <title>LIBRERIA</title>
+    <link rel="stylesheet" href="2.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1 class="logo">
+                    <img src="img/logo.png" alt="" width="300" height="150">
+                </h1>
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Buscar libros...">
+                    <button id="search-btn">Buscar</button>
+                </div>
+                
+                <nav style="position: relative;">
+                    <ul style="display: flex; justify-content: space-between;">
+                        <li><a href="inicio.html"><img src="img/inicio.png" alt="Inicio">Inicio</a></li>
+                        <li><a href="catalogo.html"><img src="img/catalogo.png" alt="Catálogo">Catálogo</a></li>
+                        <li><a href="ZOOM/1.html"><img src="img/ubi.png" alt="Maps">Maps</a></li>
+                        <li><a href="contacto.html"><img src="img/contacto.png" alt="Contacto">Contacto</a></li>
+                        <li><a href="login.html"><img src="img/login.png" alt="login">login</a></li>
+                    </ul>
+                    <div style="position: absolute; top: -50px; right: 0;">
+                        <ul style="display: flex; align-items: center;">
+                            <li>
+                                <a href="#" onclick="toggleAudio('audio1')"> 
+                                    <img src="audio/audifono.png" alt="Audio"> Audio 
+                                </a>
+                            </li>
+                            <li style="margin-left: 10px;">
+                                <a href="pedidos.html">
+                                    <img src="img/pedido.png" alt="Pedidos"> Pedidos
+                                </a>
+                            </li>
+                        </ul>
+                        
+                        <audio id="audio1" src="audio/audio.mp3"></audio>
+                        
+                        <script>
+                            function toggleAudio(audioId) {
+                                var audio = document.getElementById(audioId);
+                                if (audio.paused) {
+                                    audio.play();
+                                } else {
+                                    audio.pause();
+                                }
+                            }
+                        </script>
+                    </div>
+                </nav>
+                
+            </div>
+        </header>
+        <nav class="categorias">
+            <ul>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#mangas">Mangas y Comics</a></li>
+                <li><a href="#ficcion">Ficción</a></li>
+                <li><a href="#terror">Terror</a></li>
+                <li><a href="#infantiles">Libros Juveniles</a></li>
+                <li><a href="favoritos.html">Favoritos</a></li>
+                <li><a href="#libros-gratis">Libros Gratis</a></li>
+                <li><a href="video.html">Video</a></li>
+                <li><a href="subida.html">Subida productos</a></li>
+                
+               
+
+            </ul>
+        </nav>
+        <div class="carousel-container">
+            <div class="carousel">
+                <img src="img/1.jpg" alt="1">
+                <img src="img/2.jpg" alt="2">
+                <img src="img/3.jpg" alt="3">
+                <img src="img/4.jpg" alt="4">
+                <img src="img/5.jpg" alt="5">
+                <img src="img/6.jpg" alt="6">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
+        </div>
+        <script src="carousel.js"></script>
+    </div>
+    
+     <section id="novedades">
+    <div class="novedades">
+        <h2>NOVEDADES</h2>
+      </div>
+    </section>
+    <div class="productos">
+        
+        <div class="producto">
+            <img src="img/kunfu.jpg" width="180px" height="200px">
+            
+            <p>24 HORAS</p>
+            <p>KUNFU PANDA, EL GUERRERO DRAGON 🖤 </p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 1', 100)">COMPRAR</button>
+        </div>
+        <div class="producto">
+            <img src="img/araña.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>EL HOMBRE ARAÑA, COMPAÑEROS ARACNIDO</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 2', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/dama.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>LA DAMA Y EL VAGABUNDO UN AMOR LINDO 💕</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 3', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/kid.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>ENCERAR Y PULIR, KARATE KID (RALPH) </p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 4', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/furiosos.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>RAPIDOS Y FURIOSOS, TEMPORADA NUM 9</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 5', 100)">COMPRAR</button>
+
+        </div>
+    </div>
+    
+    <section id="mangas">
+    <div class="mas">
+        <h2>MANGAS Y COMICS</h2>
+      </div>
+    </section> 
+    <div class="productos">
+        <div class="producto">
+            <img src="img/digimon.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 6', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/naruto.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 7', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/gragon.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 8', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/ranma.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 9', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/marvel.jpg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 10', 100)">COMPRAR</button>
+
+        </div>
+        
+    </div>
+    <section id="ficcion">
+    <div class="mas">
+        <h2>FICCIÓN</h2>
+      </div>
+    </section>
+    <div class="productos">
+        <div class="producto">
+            <img src="img/ficcion/1.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 11', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/ficcion/2.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 12', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/ficcion/3.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 13', 100)">COMPRAR</button>
+        </div>
+        <div class="producto">
+            <img src="img/ficcion/4.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 14', 100)">COMPRAR</button>
+        </div>
+        <div class="producto">
+            <img src="img/ficcion/5.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 15', 100)">COMPRAR</button>
+
+        </div>
+    </div>
+
+    <div class="image">
+        <img src="img/segunda.jpg" alt="segu">
+    </div>
+
+    <section id="terror">
+    <div class="mas">
+        <h2>TERROR</h2>
+      </div>
+    </section>
+    <div class="productos">
+        <div class="producto">
+            <img src="img/terror/1.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 16', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/terror/2.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 17', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/terror/3.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 18', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/terror/4.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 19', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/terror/5.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 20', 100)">COMPRAR</button>
+
+        </div>
+    </div>
+
+     <div class="image">
+        <img src="img/tercera.jpg" alt="tercera">
+    </div>
+
+    <section id="infantiles">
+        <div class="mas">
+            <h2>LIBROS INFANTILES</h2>
+        </div>
+    </section>
+    <div class="productos">
+     
+        <div class="producto">
+            <img src="img/juvenil/1.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 21', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/juvenil/2.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 22', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/juvenil/3.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 23', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/juvenil/4.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 24', 100)">COMPRAR</button>
+
+        </div>
+        <div class="producto">
+            <img src="img/juvenil/5.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button onclick="agregarAlCarrito('Producto 25', 100)">COMPRAR</button>
+
+        </div>
+    </div>
+
+    <div class="image-container">
+        <img src="img/cuarta.jpg" alt="1">
+        <img src="img/quinta.jpg" alt="2">
+        <img src="img/sexta.jpg" alt="3">
+    </div>
+  <br>
+   <div id="myModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="modal-message"></p>
+    <button id="continue-shopping" class="modal-button continue-button">Seguir Comprando</button>
+    <button id="proceed-to-cart" class="modal-button cart-button">Ir al Carrito</button>
+  </div>
+</div>
+
+    <script>
+    function agregarAlCarrito(nombreProducto, precio) {
+    document.getElementById('modal-message').textContent = 'Se ha agregado "' + nombreProducto + '" al carrito.';
+    document.getElementById('myModal').style.display = "block";
+}
+
+document.getElementById('continue-shopping').addEventListener('click', function() {
+    document.getElementById('myModal').style.display = "none";
+});
+
+document.getElementById('proceed-to-cart').addEventListener('click', function() {
+    window.location.href = "carrito.html";
+});
+
+document.getElementsByClassName('close')[0].addEventListener('click', function() {
+    document.getElementById('myModal').style.display = "none";
+});
+
+</script>
+
+
+<section id="libros-gratis"> 
+<section class="libros-gratis">
+    <h2 style="text-align: center;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-size: 30px;"
+    >Libros Gratis</h2>
+    <div class="productos-grid">
+        <div class="producto">
+            <img src="img/gratis/1.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button id="leerBtn1">LEER</button>
+
+<script>
+document.getElementById("leerBtn1").onclick = function() {
+    window.location.href = "LIBROSDIGITALES/samples/basic/index.html";
+};
+</script>
+        </div>
+        <div class="producto">
+            <img src="img/gratis/2.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button id="leerBtn2">LEER</button>
+
+            <script>
+            document.getElementById("leerBtn2").onclick = function() {
+                window.location.href = "LIBROSDIGITALES/samples/basic/index2.html";
+            };
+            </script>
+        </div>
+        <div class="producto">
+            <img src="img/gratis/3.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button id="leerBtn3">LEER</button>
+
+            <script>
+            document.getElementById("leerBtn3").onclick = function() {
+                window.location.href = "LIBROSDIGITALES/samples/basic/index3.html";
+            };
+            </script>
+        </div>
+        <div class="producto">
+            <img src="img/gratis/4.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button id="leerBtn4">LEER</button>
+
+<script>
+document.getElementById("leerBtn4").onclick = function() {
+    window.location.href = "LIBROSDIGITALES/samples/basic/index4.html";
+};
+</script>
+    </div>
+        <div class="producto">
+            <img src="img/gratis/5.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button id="leerBtn5">LEER</button>
+
+<script>
+document.getElementById("leerBtn5").onclick = function() {
+    window.location.href = "LIBROSDIGITALES/samples/basic/index5.html";
+};
+</script>
+              </div>
+        <div class="producto">
+            <img src="img/gratis/6.jpeg" width="180px" height="200px">
+            <p>24 HORAS</p>
+            <p>HARRY POTTER Y LA PIEDRA FILOSOFAL</p>
+            <p>S/ 100.00</p>
+            <button id="leerBtn6">LEER</button>
+
+            <script>
+            document.getElementById("leerBtn6").onclick = function() {
+                window.location.href = "LIBROSDIGITALES/samples/basic/index6.html";
+            };
+            </script>
+        </div>
+    </div>
+</section>
+ <footer>
+    <div class="ubicacion">
+        <h2>
+            UBICACIÓN
+        </h2>
+        <div class="pos">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d498008.07647858356!2d-76.69566408500494!3d-12.798746434978266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x910f8cab0bac97c1%3A0xc6164afcda9d7170!2sCa%C3%B1ete%20Province%2C%20Peru!5e0!3m2!1sen!2sbd!4v1719935687204!5m2!1sen!2sbd" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>        </div>
+    </div>
+    <div class="redes-sociales">
+        <p>Shirley Lizeth Sanchez Yanoja &copy; 2024 </p>
+        <a href="https://www.facebook.com/" target="_blank"><img src="img/facebook.jpg" alt="Facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="img/instagram.png" alt="Instagram"></a>
+        <a href="https://www.tiktok.com/" target="_blank"><img src="img/tiktok.jpg" alt="TikTok"></a>
+        <a href="mailto:correo@ejemplo.com"><img src="img/gmail.png"></a>
+        <a href="tel:+1234567890"><img src="img/telofono.png"></a>
+        <a href="comentarios.html" class="btn-comentarios">Comentarios</a>
+    </div>
+</footer>
+<style>
+    .btn-comentarios {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        font-size: 16px;
+        color: rgb(255, 255, 255);
+        background-color: #007BFF;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-comentarios:hover {
+        background-color: #0056b3;
+    }
+</style>
+    </body>
+</html>
